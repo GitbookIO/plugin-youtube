@@ -1,0 +1,21 @@
+{
+    "name": "gitbook-plugin-youtube",
+    "description": "Youtube video integration made easy in GitBook",
+    "main": "index.js",
+    "version": "0.0.0",
+    "engines": {
+        "gitbook": ">1.x.x"
+    },
+    "homepage": "https://github.com/GitbookIO/plugin-youtube",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/GitbookIO/plugin-youtube.git"
+    },
+    "license": "Apache 2",
+    "bugs": {
+        "url": "https://github.com/GitbookIO/plugin-youtube/issues"
+    },
+    "dependencies": {
+        "get-youtube-id": "0.1.3"
+    }
+}
