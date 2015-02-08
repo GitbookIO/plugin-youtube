@@ -5,10 +5,11 @@ module.exports = {
         youtube: {
             process: function(blk) {
                 var videoId = getYouTubeID(blk.body) || blk.body;
-                var url = "http://www.youtube.com/watch?v="+videoId;
+                var url = "http://youtube.com/watch?v="+videoId;
+                var videoThumb = 'http://img.youtube.com/vi/'+videoId+'/0.jpg' /* 0.jpg is default full resolution image. 1–3.jpg is thumbnails */
 
                 if (this.generator != "website") {
-                    return '<a href="'+url+'">'+url+'</a>';
+                    return '<img src="'+videoThumb+'" alt="YouTube video thumbnail" /><p><a href="'+url+'">Video link</p></a>';
                 }
 
                 return '<div style="position: relative;padding-bottom: 56.25%;padding-top: 25px;height: 0;">'
