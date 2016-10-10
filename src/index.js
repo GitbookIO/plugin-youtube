@@ -22,9 +22,6 @@ const Youtube = React.createClass({
 
 module.exports = GitBook.createPlugin({
     activate: (dispatch, getState, { Components }) => {
-        // Attach component to titles
         dispatch(Components.registerComponent(Youtube, { role: 'block:youtube' }));
-    },
-    deactivate: (dispatch, getState) => {},
-    reduce: (state, action) => state
+    }
 });
