@@ -2,13 +2,13 @@ const getYouTubeID = require('get-youtube-id');
 
 module.exports = {
     blocks: {
-        youtube: (block) => {
-            console.log('in block youtube');
-            console.log(block);
-            const videoId = getYouTubeID(block.kwargs.src) || block.kwargs.src;
+        youtube: ({ kwargs }) => {
+            const videoId = getYouTubeID(kwargs.src) || kwargs.src;
             const url     = `http://youtube.com/watch?v=${videoId}`;
 
-            const videoThumb = `http://img.youtube.com/vi/${videoId}/0.jpg`; /* 0.jpg is default full resolution image. 1–3.jpg is thumbnails */
+            // Get thumbnail for E-Books version
+            // 0.jpg is default full resolution image. 1–3.jpg is thumbnails
+            const videoThumb = `http://img.youtube.com/vi/${videoId}/0.jpg`;
 
             return {
                 youtubeUrl: this.output.name != 'website' ? videoThumb : url
