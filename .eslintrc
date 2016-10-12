@@ -1,6 +1,3 @@
 {
-    "extends": "gitbook",
-    "env": {
-        "mocha": true
-    }
+    "extends": "gitbook"
 }
