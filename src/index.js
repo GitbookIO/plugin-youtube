@@ -1,7 +1,7 @@
 const GitBook   = require('gitbook-core');
 const { React } = GitBook;
 
-const Youtube = React.createClass({
+const YoutubeBlock = React.createClass({
     propTypes: {
         youtubeUrl: React.PropTypes.string.isRequired
     },
@@ -22,6 +22,6 @@ const Youtube = React.createClass({
 
 module.exports = GitBook.createPlugin({
     activate: (dispatch, getState, { Components }) => {
-        dispatch(Components.registerComponent(Youtube, { role: 'block:youtube' }));
+        dispatch(Components.registerComponent(YoutubeBlock, { role: 'block:youtube' }));
     }
 });
