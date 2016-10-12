@@ -1,0 +1,9 @@
+.YoutubeBlock {
+    position: relative;
+    width: 75%;
+    text-align: center;
+}
+
+.YoutubeBlock > img {
+    width: 100%;
+}
