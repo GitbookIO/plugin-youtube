@@ -22,13 +22,13 @@
     "prepublish": "npm run build-js"
   },
   "dependencies": {
-    "get-youtube-id": "0.1.3",
-    "gitbook-core": "4.0.0"
+    "get-youtube-id": "^1.0.0",
+    "gitbook-core": "^4.0.0"
   },
   "devDependencies": {
     "eslint": "^3.7.1",
     "eslint-config-gitbook": "^1.3.1",
-    "gitbook-plugin": "4.0.0"
+    "gitbook-plugin": "^4.0.0"
   },
   "title": "Youtube",
   "icon": "icon.png",
