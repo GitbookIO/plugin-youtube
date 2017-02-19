@@ -1,6 +1,7 @@
 {
+  "title": "Youtube",
   "name": "gitbook-plugin-youtube",
-  "description": "Youtube video integration made easy in GitBook",
+  "description": "Insert Youtube videos in your pages.",
   "main": "index.js",
   "browser": "./_assets/plugin.js",
   "ebook": "./_assets/plugin.js",
@@ -22,20 +23,32 @@
     "prepublish": "npm run build-js"
   },
   "dependencies": {
-    "get-youtube-id": "^1.0.0",
-    "gitbook-core": "^4.0.0"
+    "get-youtube-id": "^1.0.0"
   },
   "devDependencies": {
     "eslint": "^3.7.1",
-    "eslint-config-gitbook": "^1.3.1",
-    "gitbook-plugin": "^4.0.0"
+    "eslint-config-gitbook": "^1.5.0",
+    "gitbook-plugin": "^4.0.0-alpha.1"
   },
-  "title": "Youtube",
-  "icon": "icon.png",
+  "icon": "./icon.png",
   "keywords": [
     "gitbook",
     "plugin",
     "youtube",
     "gitbook:content"
-  ]
+  ],
+  "gitbook": {
+    "blocks": {
+      "youtube": {
+          "title": "Youtube Video",
+          "properties": {
+            "src": {
+              "type": "string",
+              "title": "URL of the video",
+              "required": true
+            }
+          }
+      }
+    }
+  }
 }

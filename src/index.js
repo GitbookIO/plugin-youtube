@@ -1,6 +1,10 @@
 const GitBook   = require('gitbook-core');
 const { React } = GitBook;
 
+/**
+ * Block to render a youtube video.
+ * @type {ReactClass}
+ */
 const YoutubeBlock = React.createClass({
     propTypes: {
         isVideo:   React.PropTypes.bool.isRequired,
